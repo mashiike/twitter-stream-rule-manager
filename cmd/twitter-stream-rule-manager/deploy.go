@@ -20,8 +20,7 @@ func (c *deployCmd) Synopsis() string { return "deploy" }
 func (c *deployCmd) Usage() string { return "deploy" }
 
 func (c *deployCmd) SetFlags(f *flag.FlagSet) {
-	f.StringVar(&rulesFilePath, "rules", rulesFilePath, "rule file ")
-	f.StringVar(&bearer, "bearer", "", "twitter bearer token (required)")
+	setFlags(f)
 	f.BoolVar(&c.dryRun, "dry-run", false, "dry run flag")
 }
 

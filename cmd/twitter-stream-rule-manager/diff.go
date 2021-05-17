@@ -18,8 +18,7 @@ func (c *diffCmd) Synopsis() string { return "diff" }
 func (c *diffCmd) Usage() string { return "diff" }
 
 func (c *diffCmd) SetFlags(f *flag.FlagSet) {
-	f.StringVar(&rulesFilePath, "rules", rulesFilePath, "rule file ")
-	f.StringVar(&bearer, "bearer", "", "twitter bearer token (required)")
+	setFlags(f)
 }
 
 func (c *diffCmd) Execute(ctx context.Context, _ *flag.FlagSet, args ...interface{}) subcommands.ExitStatus {

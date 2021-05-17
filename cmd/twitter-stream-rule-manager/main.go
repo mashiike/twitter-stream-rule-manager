@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"os"
 
 	"github.com/google/subcommands"
 )
@@ -20,10 +21,15 @@ func main() {
 	subcommands.Register(&diffCmd{}, "")
 	subcommands.Register(&deployCmd{}, "")
 
-	flag.StringVar(&rulesFilePath, "rules", "rules.json", "rule file path (required)")
-	flag.StringVar(&bearer, "bearer", "", "twitter bearer token (required)")
+	setFlags(flag.CommandLine)
 	flag.Parse()
 
 	ctx := context.Background()
 	subcommands.Execute(ctx)
+}
+
+func setFlags(f *flag.FlagSet) {
+	defaultToken := os.Getenv("TWITTER_BEARER_TOKEN")
+	f.StringVar(&rulesFilePath, "rules", "rules.json", "rule file path (required)")
+	f.StringVar(&bearer, "bearer", defaultToken, "twitter bearer token (required, or set with TWITTER_BEARER_TOKEN env)")
 }
