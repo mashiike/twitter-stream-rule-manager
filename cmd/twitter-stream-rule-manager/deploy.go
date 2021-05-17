@@ -6,7 +6,7 @@ import (
 	"log"
 
 	"github.com/google/subcommands"
-	twstrulemgr "github.com/mashiike/twitter-filterd-stream-rule-manager"
+	twstrulemgr "github.com/mashiike/twitter-stream-rule-manager"
 )
 
 type deployCmd struct {

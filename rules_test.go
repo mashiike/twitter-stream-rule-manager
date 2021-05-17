@@ -3,7 +3,7 @@ package twstrulemgr_test
 import (
 	"testing"
 
-	twstrulemgr "github.com/mashiike/twitter-filterd-stream-rule-manager"
+	twstrulemgr "github.com/mashiike/twitter-stream-rule-manager"
 	"github.com/stretchr/testify/assert"
 )
 

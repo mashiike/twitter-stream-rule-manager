@@ -1,4 +1,4 @@
-module github.com/mashiike/twitter-filterd-stream-rule-manager
+module github.com/mashiike/twitter-stream-rule-manager
 
 go 1.16
 
