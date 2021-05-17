@@ -1,0 +1,8 @@
+{
+  "rules":[
+    {
+      "tag": "hoge not RT",
+      "value": "hoge -RT"
+    }
+  ]
+}
